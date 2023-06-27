@@ -1,5 +1,4 @@
 import time
-import threading
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
@@ -40,8 +39,6 @@ def get1():
     time.sleep(3605)
     starting()
 
-t1 = threading.Thread(target=get1)
-
 def f_element():
     global options
     global element
@@ -50,7 +47,7 @@ def f_element():
 
 def starting():
     time.sleep(1)
-    t1.start()
+    get1()
 
 ##Start
 print ('Epicloot-event-claimer')
