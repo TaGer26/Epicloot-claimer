@@ -33,19 +33,24 @@ def get1():
     global element
     wd.refresh()
     f_element()
-    time.sleep(8)
+    time.sleep(3.5)
     element.click()
     bonus = bonus + 1
     print ('Бонус забран! (' + (str(bonus)) + ' шт)')
     time.sleep(3605)
+    start()
 
 t1 = threading.Thread(target=get1)
 
 def f_element():
     global options
     global element
-    time.sleep(7)
+    time.sleep(3)
     element = wd.find_element(By.CLASS_NAME, 'game-gift__take')
+
+def starting():
+    time.sleep(1)
+    t1.start()
 
 ##Start
 print ('Epicloot-event-claimer')
@@ -57,6 +62,6 @@ st = input('Пожалуйста авторизируйтесь в аккаун�
 time.sleep(0.25)
 start = input('Старт (y/n)?: ')
 if start == 'y':
-    t1.start()
+    starting()
 elif start == 'n':
     exit()
