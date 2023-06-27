@@ -38,7 +38,7 @@ def get1():
     bonus = bonus + 1
     print ('Бонус забран! (' + (str(bonus)) + ' шт)')
     time.sleep(3605)
-    start()
+    starting()
 
 t1 = threading.Thread(target=get1)
 
