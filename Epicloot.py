@@ -21,7 +21,6 @@ options.add_argument('--no-sandbox')
 options.add_argument('--no-zygote')
 options.add_argument('--log-level=3')
 options.add_argument('--allow-running-insecure-content')
-options.add_argument('--disable-web-security')
 options.add_argument('--disable-features=VizDisplayCompositor')
 options.add_argument('--disable-breakpad')
 
